@@ -1,53 +1,46 @@
-import React, { useState } from "react";
-import { Animated, StyleSheet, TouchableOpacity, View } from "react-native";
-import { CustomText } from "UI/CustomText";
+import React from "react";
+import { StyleSheet } from "react-native";
+import FlipCard from "react-native-flip-card";
 
-export const Tile: React.FC<{ spanishWord: string; englishWord: string }> = ({
-	spanishWord,
-	englishWord,
-}) => {
-	const [isFlipped, setIsFlipped] = useState(false);
+import { Side } from "./Side";
 
-	const flipCard = () => {
-		setIsFlipped(!isFlipped);
-	};
-
+export const Tile: React.FC<{
+	spanishWord: string;
+	englishWord: string;
+	englishExample: string;
+	spanishExample: string;
+}> = ({ spanishWord, englishWord, englishExample, spanishExample }) => {
 	return (
-		<View style={styles.cardContainer}>
-			{isFlipped ? (
-				<TouchableOpacity
-					style={{ ...styles.card, ...styles.cardEnglish }}
-					onPress={() => setIsFlipped(!isFlipped)}
-				>
-					<CustomText>{englishWord}</CustomText>
-				</TouchableOpacity>
-			) : (
-				<TouchableOpacity
-					style={{ ...styles.card, ...styles.cardSpanish }}
-					onPress={() => setIsFlipped(!isFlipped)}
-				>
-					<CustomText>{spanishWord}</CustomText>
-				</TouchableOpacity>
-			)}
-		</View>
+		<FlipCard
+			style={styles.cardContainer}
+			flipHorizontal={true}
+			flipVertical={false}
+		>
+			<Side
+				word={englishWord}
+				image={require("../../assets/united-kingdom.png")}
+				example={englishExample}
+				cardTypeStyle={styles.cardEnglish}
+			/>
+			<Side
+				word={spanishWord}
+				image={require("../../assets/spain.png")}
+				example={spanishExample}
+				cardTypeStyle={styles.cardSpanish}
+			/>
+		</FlipCard>
 	);
 };
 
 const styles = StyleSheet.create({
 	cardContainer: {
 		flex: 1,
-		justifyContent: "center",
 		alignItems: "center",
-	},
-	card: {
-		width: 350,
-		height: 550,
-		borderRadius: 40,
 		justifyContent: "center",
-		alignItems: "center",
+		width: "100%",
 	},
 	cardEnglish: {
-		backgroundColor: "#4c4d52",
+		backgroundColor: "#9b9bc7",
 	},
 	cardSpanish: {
 		backgroundColor: "#232429",

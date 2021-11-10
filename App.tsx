@@ -41,15 +41,16 @@ export default function App() {
 					tabBarActiveTintColor: "#4550C5",
 					tabBarInactiveTintColor: "gray",
 					tabBarLabelStyle: {
-						fontSize: 16,
+						fontSize: 10,
+						marginTop: 5,
+						marginBottom: 5,
 					},
 					tabBarOptions: {
 						showIcon: true,
 					},
 					headerTitleStyle: {
 						color: "#4550C5",
-						fontSize: 25,
-						letterSpacing: 2,
+						fontSize: 20,
 					},
 				})}
 			>
