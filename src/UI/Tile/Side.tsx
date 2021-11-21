@@ -46,7 +46,7 @@ const imageStyles = StyleSheet.create({
 
 const wordStyles = StyleSheet.create({
 	word: {
-		fontSize: 22,
+		fontSize: 30,
 		fontWeight: "bold",
 		color: "#FDFDFD",
 	},
@@ -54,11 +54,13 @@ const wordStyles = StyleSheet.create({
 
 const exampleStyles = StyleSheet.create({
 	exampleContainer: {
-		width: "75%",
+		width: 280,
 	},
 	exampleContent: {
-		fontSize: 18,
+		fontSize: 25,
 		textAlign: "center",
+		paddingLeft: 40,
+		paddingRight: 40,
 	},
 });
 

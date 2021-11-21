@@ -52,8 +52,10 @@ const styles = StyleSheet.create({
 	random: {
 		flex: 1,
 		alignItems: "center",
+		alignSelf: "center",
 		justifyContent: "space-evenly",
-		// borderColor: "blue",
+		width: "90%",
+		// borderColor: "green",
 		// borderWidth: 2,
 		// borderStyle: "solid",
 	},
@@ -62,17 +64,17 @@ const styles = StyleSheet.create({
 		justifyContent: "center",
 	},
 	randomTextContent: {
-		fontSize: 18,
+		fontSize: 25,
 		fontWeight: "bold",
 		color: "#FDFDFD",
 	},
 	randomTile: {
 		flex: 4,
 		alignItems: "center",
-		// borderColor: "green",
+		width: "100%",
+		// borderColor: "blue",
 		// borderWidth: 2,
 		// borderStyle: "solid",
-		width: "100%",
 	},
 	randomButtonContainer: {
 		flex: 1,
