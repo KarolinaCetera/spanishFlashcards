@@ -20,7 +20,7 @@ export const Random: React.FC = () => {
 
 	const onPressButton = (): void => {
 		setRandomWord(getRandomWord());
-		console.log("Test")
+		console.log("Test2")
 	};
 
 	return (
