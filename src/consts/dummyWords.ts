@@ -16,7 +16,7 @@ export const dummyWords: Words = {
 			id: 1,
 			english: "to buy",
 			spanish: "comprar",
-			englishExample: "I want to buy two apples.",
+			englishExample: "I want to buy three apples.",
 			spanishExample: "Yo quiero comprar dos manzanas.",
 		},
 		{
